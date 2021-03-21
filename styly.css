@@ -51,3 +51,25 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.buttons a {
+  color: #ffffff;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.buttonPravidla a {
+  background-color: #1fcca4;
+  text-align: center;
+  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 360px;
+}
+.buttonZacit a {
+  background-color: #0197f6;
+  text-align: center;
+  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 360px;
+}
