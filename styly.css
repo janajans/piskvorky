@@ -13,3 +13,8 @@ body {
   background: linear-gradient(#615dad, #ffc8da);
   height: 100vh; /* aby barva zakryla celou stránku*/
 }
+
+.main {
+  width: 360px;
+  margin: auto; /* vycentrování na střed */
+}
