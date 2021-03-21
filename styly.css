@@ -73,3 +73,9 @@ body {
   padding-bottom: 20px;
   width: 360px;
 }
+.buttonPravidla a:hover {
+  background-color: #1cbb96;
+}
+.buttonZacit a:hover {
+  background-color: #0090e9;
+}
