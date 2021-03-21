@@ -3,3 +3,13 @@ Barva textu  #ffffff
 Podkladová tmavě modrá  #283e50
 Tlačítko Pravidla  #1fcca4 + po najetí myši  #1cbb96
 Tlačítko Začít hrát  #0197f6 + po najetí  #0090e9 */
+
+* {
+  /* hvězdička = nastavení pro vše */
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  height: 100vh; /* aby barva zakryla celou stránku*/
+}
