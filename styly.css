@@ -18,3 +18,28 @@ body {
   width: 360px;
   margin: auto; /* vycentrování na střed */
 }
+
+.image {
+  width: 360px;
+}
+
+.text {
+  background-color: #283e50;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+  padding: 30px 10px 30px 10px;
+}
+
+.text h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: 100; /* písmo je tenčí */
+}
+
+.text p {
+  margin: 0;
+  font-family: sans-serif;
+}
