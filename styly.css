@@ -1,11 +1,4 @@
-/* Gradient: #615dad +  #ffc8da
-Barva textu  #ffffff
-Podkladová tmavě modrá  #283e50
-Tlačítko Pravidla  #1fcca4 + po najetí myši  #1cbb96
-Tlačítko Začít hrát  #0197f6 + po najetí  #0090e9 */
-
 * {
-  /* hvězdička = nastavení pro vše */
   box-sizing: border-box;
 }
 
@@ -23,6 +16,7 @@ body {
 
 .image {
   width: 360px;
+  border-radius: 5px 5px 0px 0px; /* kulaté rohy */
 }
 
 .text {
@@ -64,6 +58,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 360px;
+  border-bottom: 1px solid black; /*čára mezi buttony */
 }
 .buttonZacit a {
   background-color: #0197f6;
