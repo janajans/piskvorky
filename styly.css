@@ -17,6 +17,8 @@ body {
 .main {
   width: 360px;
   margin: auto; /* vycentrování na střed */
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
@@ -42,4 +44,10 @@ body {
 .text p {
   margin: 0;
   font-family: sans-serif;
+}
+
+.buttons ul {
+  list-style-type: none; /* smazání bullet points u položek seznamu */
+  padding: 0;
+  margin: 0;
 }
