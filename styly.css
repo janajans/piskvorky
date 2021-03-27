@@ -41,7 +41,7 @@ body {
   font-family: sans-serif;
 }
 
-.buttons ul {
+.buttons {
   list-style-type: none; /* smazání bullet points u položek seznamu */
   padding: 0;
   margin: 0;
@@ -52,7 +52,7 @@ body {
   font-family: sans-serif;
   text-decoration: none;
 }
-.buttonPravidla a {
+.buttonPravidla {
   background-color: #1fcca4;
   text-align: center;
   display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
@@ -61,7 +61,7 @@ body {
   width: 360px;
   border-bottom: 1px solid black; /*čára mezi buttony */
 }
-.buttonZacit a {
+.buttonZacit {
   background-color: #0197f6;
   text-align: center;
   display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
@@ -69,9 +69,9 @@ body {
   padding-bottom: 20px;
   width: 360px;
 }
-.buttonPravidla a:hover {
+a.buttonPravidla:hover {
   background-color: #1cbb96;
 }
-.buttonZacit a:hover {
+a.buttonZacit:hover {
   background-color: #0090e9;
 }
