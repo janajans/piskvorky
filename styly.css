@@ -52,7 +52,9 @@ body {
   font-family: sans-serif;
   text-decoration: none;
 }
-.buttonPravidla {
+
+.buttonPravidla,
+.buttonUvodni {
   background-color: #1fcca4;
   text-align: center;
   display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
@@ -69,9 +71,57 @@ body {
   padding-bottom: 20px;
   width: 360px;
 }
-a.buttonPravidla:hover {
+a.buttonPravidla:hover,
+a.buttonUvodni:hover {
   background-color: #1cbb96;
 }
 a.buttonZacit:hover {
   background-color: #0090e9;
+}
+
+/* Pravidla */
+.mainRules {
+  max-width: 800px;
+  margin: auto; /* vycentrování na střed */
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+}
+
+.textRules {
+  background-color: #283e50;
+  color: #ffffff;
+  text-align: left;
+  line-height: 2;
+  padding: 30px 10px 30px 10px;
+  font-family: sans-serif;
+}
+
+.images {
+  background-color: #283e50;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-style: italic;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.images img {
+  max-width: 350px;
+}
+.images figure {
+  max-width: 350px;
+  margin: 0;
+  padding: 25px 0px;
+}
+.textRules h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: 100; /* písmo je tenčí */
+  text-align: center;
 }
