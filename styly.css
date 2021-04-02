@@ -42,7 +42,6 @@
 }
 
 .buttons {
-  list-style-type: none; /* smazání bullet points u položek seznamu */
   padding: 0;
   margin: 0;
 }
@@ -77,7 +76,7 @@ a.button1Zacit:hover {
   background-color: #0090e9;
 }
 
-/* Pravidla */
+/* ------------Pravidla------------ */
 .pravidla {
   background: linear-gradient(#615dad, #ffc8da);
   height: 100%; /* aby barva zakryla celou stránku*/
@@ -132,19 +131,19 @@ a.button1Zacit:hover {
 .button2Uvodni {
   background-color: #1fcca4;
   text-align: center;
-  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
+  display: inline-block;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 800px;
+  width: 100%;
   border-bottom: 1px solid black; /*čára mezi buttony */
 }
 .button2Zacit {
   background-color: #0197f6;
+  display: inline-block;
   text-align: center;
-  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 800px;
+  width: 100%;
   flex-shrink: 1;
 }
 a.button2Uvodni:hover {
