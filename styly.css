@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+.index {
   background: linear-gradient(#615dad, #ffc8da);
   height: 100vh; /* aby barva zakryla celou stránku*/
 }
@@ -53,8 +53,7 @@ body {
   text-decoration: none;
 }
 
-.buttonPravidla,
-.buttonUvodni {
+.button1Pravidla {
   background-color: #1fcca4;
   text-align: center;
   display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
@@ -63,7 +62,7 @@ body {
   width: 360px;
   border-bottom: 1px solid black; /*čára mezi buttony */
 }
-.buttonZacit {
+.button1Zacit {
   background-color: #0197f6;
   text-align: center;
   display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
@@ -71,15 +70,19 @@ body {
   padding-bottom: 20px;
   width: 360px;
 }
-a.buttonPravidla:hover,
-a.buttonUvodni:hover {
+a.button1Pravidla:hover {
   background-color: #1cbb96;
 }
-a.buttonZacit:hover {
+a.button1Zacit:hover {
   background-color: #0090e9;
 }
 
 /* Pravidla */
+.pravidla {
+  background: linear-gradient(#615dad, #ffc8da);
+  height: 100%; /* aby barva zakryla celou stránku*/
+}
+
 .mainRules {
   max-width: 800px;
   margin: auto; /* vycentrování na střed */
@@ -95,6 +98,7 @@ a.buttonZacit:hover {
   line-height: 2;
   padding: 30px 10px 30px 10px;
   font-family: sans-serif;
+  border-radius: 5px 5px 0px 0px; /* kulaté rohy */
 }
 
 .images {
@@ -121,7 +125,45 @@ a.buttonZacit:hover {
   font-family: 'Lobster', cursive;
   font-size: 50px;
   margin: 0;
-  padding-bottom: 15px;
+  padding: 0;
   font-weight: 100; /* písmo je tenčí */
   text-align: center;
+}
+.button2Uvodni {
+  background-color: #1fcca4;
+  text-align: center;
+  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 800px;
+  border-bottom: 1px solid black; /*čára mezi buttony */
+}
+.button2Zacit {
+  background-color: #0197f6;
+  text-align: center;
+  display: inline-block; /*řádkový prvek a převést na řádkově blokový, aby správně fungoval padding nahoře a dole */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 800px;
+  flex-shrink: 1;
+}
+a.button2Uvodni:hover {
+  background-color: #1cbb96;
+}
+a.button2Zacit:hover {
+  background-color: #0090e9;
+  flex-shrink: 1;
+}
+.list {
+  margin: 0;
+}
+
+li {
+  padding-left: 10px;
+}
+
+.list img {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%); /*z černé na bílou*/
 }
