@@ -189,7 +189,7 @@ a.button2Zacit:hover {
 /* ---------------Hra--------------- */
 .hra {
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100vh; /* aby barva zakryla celou stránku*/
+  height: 100%; /* aby barva zakryla celou stránku*/
 }
 
 .mainHra {
@@ -218,5 +218,12 @@ a.button2Zacit:hover {
 .mainHra p {
   color: #ffffff;
   font-family: sans-serif;
-  line-height: 1.5;
+  font-size: 2em;
+}
+
+.hraciPole button {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: 0;
 }
