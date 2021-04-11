@@ -4,7 +4,7 @@
 
 .index {
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100vh; /* aby barva zakryla celou stránku*/
+  min-height: 100vh; /* aby barva zakryla celou stránku*/
 }
 
 .main {
@@ -69,17 +69,19 @@
   padding-bottom: 20px;
   width: 360px;
 }
-a.button1Pravidla:hover {
+a.button1Pravidla:hover,
+a.button1Pravidla:focus {
   background-color: #1cbb96;
 }
-a.button1Zacit:hover {
+a.button1Zacit:hover,
+a.button1Zacit:focus {
   background-color: #0090e9;
 }
 
-/* ---------------Pravidla--------------- */
+/* ----------------------------PRAVIDLA---------------------------------- */
 .pravidla {
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100%; /* aby barva zakryla celou stránku*/
+  min-height: 100vh; /* aby barva zakryla celou stránku*/
 }
 
 .mainRules {
@@ -166,10 +168,12 @@ figcaption {
   width: 100%;
   flex-shrink: 1;
 }
-a.button2Uvodni:hover {
+a.button2Uvodni:hover,
+a.button2Uvodni:focus {
   background-color: #1cbb96;
 }
-a.button2Zacit:hover {
+a.button2Zacit:hover,
+a.button2Zacit:focus {
   background-color: #0090e9;
   flex-shrink: 1;
 }
@@ -186,18 +190,19 @@ a.button2Zacit:hover {
     margin: 15px 15px 35px 15px;
   }
 }
-/* ---------------Hra--------------- */
+/* ------------------------------------HRA------------------------------------- */
 .hra {
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100%; /* aby barva zakryla celou stránku*/
+  min-height: 100vh; /* aby barva zakryla celou stránku*/
 }
 
 .mainHra {
-  max-width: 80vmin;
+  max-width: 80vmin; /* "stránka se bude lépe přízpůsobovat širokoúhlým obrazovkám i telefonům na výšku."*/
   margin: auto; /* vycentrování na střed */
   display: flex;
   flex-direction: column;
   margin-top: 65px;
+  margin-bottom: 65px;
 }
 .mainHra h1 {
   font-family: 'Lobster', cursive;
@@ -209,21 +214,67 @@ a.button2Zacit:hover {
   text-align: center;
 }
 
-.mainHra img {
-  width: 1em;
-  height: 1em;
-  filter: invert(100%); /*z černé na bílou*/
+.horniPruh {
+  display: flex;
+  justify-content: space-between;
 }
 
 .mainHra p {
   color: #ffffff;
   font-family: sans-serif;
-  font-size: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.krouzek {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%); /*z černé na bílou*/
+  vertical-align: -0.15em; /*zarovnání kolečka s "HRAJE:" */
+}
+
+/*----------------------ikonky---------------------------*/
+.iconHome {
+  background-color: #1fcca4;
+}
+.iconRestart {
+  background-color: #0197f6;
+}
+.iconHome:hover,
+.iconHome:focus {
+  background-color: #1cbb96;
+}
+.iconRestart:hover,
+.iconRestart:focus {
+  background-color: #0090e9;
+}
+.iconHome,
+.iconRestart {
+  padding: 10px;
+  border-radius: 5px; /* kulaté rohy */
+}
+.iconHome img,
+.iconRestart img {
+  width: 25px;
+  height: 25px;
+}
+/*------------------------hrací pole----------------------------*/
+.hraciPole {
+  font-size: 0; /*odstraní mezery mezi buttony*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: auto;
 }
 
 .hraciPole button {
-  width: 80px;
-  height: 80px;
+  width: 10%;
+  min-width: 25px;
+  min-height: 25px;
   padding: 0;
-  border: 0;
+  border: 2px solid black;
+}
+.hraciPole button:hover,
+.hraciPole button:focus {
+  filter: brightness(150%); /*zesvětlí při najetí myši*/
 }
