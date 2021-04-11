@@ -286,7 +286,8 @@ a.button2Zacit:focus {
   ); /* bílá pro zesvětlení + průhlednost*/
 }
 
-.hraciPole button:hover {
+.hraciPole button:hover,
+.hraciPole button:focus {
   background-color: rgba(
     255,
     255,
