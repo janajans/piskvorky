@@ -2,8 +2,13 @@
   box-sizing: border-box;
 }
 
+/* *::after,
+*::before {
+  box-sizing: inherit;
+} */
+
 .index {
-  background: linear-gradient(#615dad, #ffc8da);
+  background: linear-gradient(#615dad, #c78fa2);
   min-height: 100vh; /* aby barva zakryla celou stránku*/
 }
 
@@ -202,7 +207,6 @@ a.button2Zacit:focus {
   display: flex;
   flex-direction: column;
   margin-top: 65px;
-  margin-bottom: 65px;
 }
 .mainHra h1 {
   font-family: 'Lobster', cursive;
@@ -230,7 +234,7 @@ a.button2Zacit:focus {
   width: 1em;
   height: 1em;
   filter: invert(100%); /*z černé na bílou*/
-  vertical-align: -0.15em; /*zarovnání kolečka s "HRAJE:" */
+  vertical-align: -0.15em; /*zarovnání s nápisem "HRAJE:" */
 }
 
 /*----------------------ikonky---------------------------*/
@@ -260,21 +264,33 @@ a.button2Zacit:focus {
 }
 /*------------------------hrací pole----------------------------*/
 .hraciPole {
-  font-size: 0; /*odstraní mezery mezi buttony*/
+  /* font-size: 0; /*odstraní mezery mezi buttony*/
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-  flex-basis: auto;
+  border: 1px solid black; /* aby okraj pole nebyl světlejší než čáry uvnitř */
 }
 
 .hraciPole button {
   width: 10%;
-  min-width: 25px;
-  min-height: 25px;
+  height: 8vmin;
   padding: 0;
-  border: 2px solid black;
+  margin: 0;
+  border: 1px solid black;
+  /*opacity: 0.3;              tohle zesvětlilo i bordery */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* bílá pro zesvětlení + průhlednost*/
 }
-.hraciPole button:hover,
-.hraciPole button:focus {
-  filter: brightness(150%); /*zesvětlí při najetí myši*/
+
+.hraciPole button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.45
+  ); /* 0.45 = víc bílé barvy a menší průhlednost */
 }
