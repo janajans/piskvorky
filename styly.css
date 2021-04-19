@@ -303,3 +303,9 @@ a.button2Zacit:focus {
 .board__field--cross {
   content: url(img/cross.svg);
 }
+/*----- velikost kroužků a čtverečků-----*/
+.board__field--circle img,
+.board__field--cross img {
+  width: 63%;
+  height: 63%;
+}

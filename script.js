@@ -1,17 +1,13 @@
 'use strict';
-
-//reagovat na uživatelův výběr políčka - Podle toho, kdo je na tahu, budeš přidávat do herní plochy kolečka nebo křížky a v levém horním rohu zobrazovat, čí tah následuje.
-
 // proměnná --> kdo je na tahu
 let turn = 'circle';
 
-// Funkce move dělá:
+// Funkce dělá:
 // - přidej políčku příslušnou třídu (kdo je na tahu)
 // - zobrazí na políčku příslušný obrázek (křížek nebo kolečko)
 // - změní v hlavičce ukazatel, kdo je na tahu
 // - střídá, kdo je na tahu
 // - pokud v kliknutém políčku už je nějaký symbol, nereaguje na klik
-
 const turnElm = document.querySelector('.hraje');
 
 const move = (event) => {
