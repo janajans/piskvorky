@@ -230,7 +230,7 @@ a.button2Zacit:focus {
   font-weight: bold;
 }
 
-.move {
+.turn {
   width: 1em;
   height: 1em;
   filter: invert(100%); /*z černé na bílou*/
