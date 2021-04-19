@@ -196,19 +196,19 @@ a.button2Zacit:focus {
   }
 }
 /* ------------------------------------HRA------------------------------------- */
-.hra {
+.game {
   background: linear-gradient(#615dad, #ffc8da);
   min-height: 100vh; /* aby barva zakryla celou stránku*/
 }
 
-.mainHra {
+.mainGame {
   max-width: 80vmin; /* "stránka se bude lépe přízpůsobovat širokoúhlým obrazovkám i telefonům na výšku."*/
   margin: auto; /* vycentrování na střed */
   display: flex;
   flex-direction: column;
   margin-top: 65px;
 }
-.mainHra h1 {
+.mainGame h1 {
   font-family: 'Lobster', cursive;
   font-size: 50px;
   color: #ffffff;
@@ -218,19 +218,19 @@ a.button2Zacit:focus {
   text-align: center;
 }
 
-.horniPruh {
+.header {
   display: flex;
   justify-content: space-between;
 }
 
-.mainHra p {
+.mainGame p {
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.krouzek {
+.move {
   width: 1em;
   height: 1em;
   filter: invert(100%); /*z černé na bílou*/
@@ -263,7 +263,7 @@ a.button2Zacit:focus {
   height: 25px;
 }
 /*------------------------hrací pole----------------------------*/
-.hraciPole {
+.board {
   /* font-size: 0; /*odstraní mezery mezi buttony*/
   display: flex;
   flex-wrap: wrap;
@@ -271,9 +271,9 @@ a.button2Zacit:focus {
   border: 1px solid black; /* aby okraj pole nebyl světlejší než čáry uvnitř */
 }
 
-.hraciPole button {
+.board button {
   width: 10%;
-  height: 8vmin;
+  height: 8vmin; /* calc(80vmin/10)  */
   padding: 0;
   margin: 0;
   border: 1px solid black;
@@ -286,12 +286,20 @@ a.button2Zacit:focus {
   ); /* bílá pro zesvětlení + průhlednost*/
 }
 
-.hraciPole button:hover,
-.hraciPole button:focus {
+.board button:hover,
+.board button:focus {
   background-color: rgba(
     255,
     255,
     255,
     0.45
   ); /* 0.45 = víc bílé barvy a menší průhlednost */
+}
+
+.board__field--circle {
+  content: url(img/circle.svg);
+}
+
+.board__field--cross {
+  content: url(img/cross.svg);
 }
