@@ -307,6 +307,34 @@ a.button2Zacit:focus {
 /*----- velikost kroužků a čtverečků-----*/
 .board__field--circle img,
 .board__field--cross img {
-  width: 63%;
-  height: 63%;
+  width: 3.5em;
+  height: 3.5em;
 }
+
+/*--------animace - není to pěkné, takže schovávám-------------*/
+/* 
+@keyframes animation {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 30%;
+  }
+  50% {
+    width: 70%;
+  }
+  75% {
+    width: 90%;
+  }
+  90% {
+    width: 110%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.board__field--circle img,
+.board__field--cross img {
+  animation: animation 0.15s;
+} */

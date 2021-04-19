@@ -38,5 +38,3 @@ const buttons = document.querySelectorAll('.board__field');
 for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', move);
 }
-
-// Pomocí animací přidej symbolům efekt postupného zvětšení. V náhledu je animace zpomalená z času 0.15s (na 0.45s), aby bylo lépe vidět, jak má vypadat.
