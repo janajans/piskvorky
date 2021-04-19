@@ -10,6 +10,7 @@ let turn = 'circle';
 // - zobrazí na políčku příslušný obrázek (křížek nebo kolečko)
 // - změní v hlavičce ukazatel, kdo je na tahu
 // - střídá, kdo je na tahu
+// - pokud v kliknutém políčku už je nějaký symbol, nereaguje na klik
 
 const turnElm = document.querySelector('.hraje');
 
@@ -26,6 +27,10 @@ const move = (event) => {
     turnElm.innerHTML =
       'HRAJE: <img class="turn turn--cross" src="img/cross.svg" alt="cross turn" />';
     turn = 'circle';
+  } else if (
+    event.target.className === 'board__field--circle' ||
+    event.target.className === 'board__field--cross'
+  ) {
   }
 };
 // //Pomocí posluchače událostí po kliknutí na políčko se provede funkce move
@@ -33,3 +38,7 @@ const buttons = document.querySelectorAll('.board__field');
 for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', move);
 }
+
+// Bonus
+// Zamez, aby se na již vyplněná políčka nešlo dostat klávesou tab přidáním atributu disabled.
+// Pomocí animací přidej symbolům efekt postupného zvětšení. V náhledu je animace zpomalená z času 0.15s (na 0.45s), aby bylo lépe vidět, jak má vypadat.
