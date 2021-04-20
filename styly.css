@@ -332,9 +332,19 @@ a.button2Zacit:focus {
   100% {
     width: 100%;
   }
+} */
+
+@keyframes gradual-growth {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 60%;
+  }
 }
 
 .board__field--circle img,
 .board__field--cross img {
-  animation: animation 0.15s;
-} */
+  animation-name: gradual-growth;
+  animation-duration: 0.14s;
+}
