@@ -17,14 +17,14 @@ const move = (event) => {
     event.target.classList.add('board__field--circle');
     event.target.innerHTML = '<img src="img/circle.svg" alt="circle turn" />';
     turnElm.innerHTML =
-      'HRAJE: <img class="turn turn--circle" src="img/circle.svg" alt="circle turn" />';
+      'HRAJE: <img class="turn turn--cross" src="img/cross.svg" alt="cross turn" />';
     event.target.disabled = true;
     turn = 'cross';
   } else if (turn === 'cross') {
     event.target.classList.add('board__field--cross');
     event.target.innerHTML = '<img src="img/cross.svg" alt="cross turn" />';
     turnElm.innerHTML =
-      'HRAJE: <img class="turn turn--cross" src="img/cross.svg" alt="cross turn" />';
+      'HRAJE: <img class="turn turn--circle" src="img/circle.svg" alt="circle turn" />';
     event.target.disabled = true;
     turn = 'circle';
   } else if (
