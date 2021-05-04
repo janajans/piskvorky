@@ -145,8 +145,11 @@ const move = (event) => {
     turn = 'cross';
     // zjisti při každém tahu, jestli se nejedná o výherní
     if (isWinningMove(event.target)) {
-      // Pokud vrátí true, zobraz alert s hláškou, který hráč vyhrál.
-      alert('Vyhrál hráč s kolečky.');
+      // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
+      let reload = confirm('Vyhrál hráč s kolečky.');
+      if ((reload = true)) {
+        location.reload();
+      }
     }
   } else if (turn === 'cross') {
     event.target.classList.add('board__field--cross');
@@ -157,8 +160,11 @@ const move = (event) => {
     turn = 'circle';
     // zjisti při každém tahu, jestli se nejedná o výherní
     if (isWinningMove(event.target)) {
-      // Pokud vrátí true, zobraz alert s hláškou, který hráč vyhrál.
-      alert('Vyhrál hráč s křížky.');
+      // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
+      let reload = confirm('Vyhrál hráč s křížky.');
+      if ((reload = true)) {
+        location.reload();
+      }
     }
   } else if (
     event.target.className === 'board__field--circle' ||
@@ -256,5 +262,4 @@ const isWinningMove = (field) => {
 };
 
 // BONUS
-// 1. Při výhře místo alertu zobraz confirm. Pokud uživatel klikne na Ok, načti znovu stránku zavoláním location.reload().
 // 2. Jako výhru počítej i pět stejných symbolů na diagonále. (Rada: nahoru diagonála vpravo = nejen odečíst řádek, ale i přičíst sloupec atp.)
