@@ -311,7 +311,9 @@ a.button2Zacit:focus {
   height: 3.5em;
 }
 
-/*--------animace - není to pěkné, takže schovávám-------------*/
+/*---------------animace ------------------*/
+
+/* Toto není pěkné - cuká se to, ale je to to, čeho chci docílit (= zvětšení ke konci) */
 /* 
 @keyframes animation {
   0% {
