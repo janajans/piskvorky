@@ -12,13 +12,14 @@ const move = (event) => {
     event.target.disabled = true;
     turn = 'cross';
     // zjisti při každém tahu, jestli se nejedná o výherní
-    let result;
     if (isWinningMove(event.target)) {
-      // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
-      result = confirm('Vyhrál hráč s kolečky.');
-      if ((result = true)) {
-        location.reload();
-      }
+      setTimeout(function () {
+        // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
+        let result = confirm('Vyhrál hráč s kolečky.');
+        if (result) {
+          location.reload();
+        }
+      }, 300);
     }
   } else if (turn === 'cross') {
     event.target.classList.add('board__field--cross');
@@ -29,16 +30,17 @@ const move = (event) => {
     turn = 'circle';
     // zjisti při každém tahu, jestli se nejedná o výherní
     if (isWinningMove(event.target)) {
-      // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
-      let result = confirm('Vyhrál hráč s křížky.');
-      if ((result = true)) {
-        location.reload();
-      }
+      setTimeout(function () {
+        // Bonus 1: při výhře zobraz confirm, pokud uživatel klikne na Ok, načti znovu stránku
+        let result = confirm('Vyhrál hráč s křížky.');
+        if (result) {
+          location.reload();
+        }
+      }, 300);
     }
-  } else if (
+  } else {
     event.target.className === 'board__field--circle' ||
-    event.target.className === 'board__field--cross'
-  ) {
+      event.target.className === 'board__field--cross';
   }
 };
 
