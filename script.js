@@ -131,26 +131,26 @@ const isWinningMove = (field) => {
 
   //-------------------DIAGONÁLNĚ-----------------
   let DiagonallyUpLeftToRight = 1; // Jednička pro právě vybrané políčko
-  // Koukni doprava nahoru
+  // KOUKNI DOPRAVA NAHORU
   let r = origin.row;
   let c = origin.column;
   while (
-    c > 0 &&
-    r < boardSize - 1 &&
-    symbol === getSymbol(getField(r - 1, c + 1))
+    r > 0 && // dokud je r větší než nula (tzn. dokud mám kam stoupat nahoru)
+    c < boardSize - 1 && // dokud je c menší než pravý kraj hracího pole (tzn. dokud se mám pořád ještě kam koukat směrem doprava
+    symbol === getSymbol(getField(r - 1, c + 1)) // dokud je můj původní symbol pořád ještě totožný s políčkem o jedno nahoru a o jedno doprava, tj. s tím, kam se koukám)
   ) {
-    DiagonallyUpLeftToRight++;
-    r -= 1;
-    c += 1;
+    DiagonallyUpLeftToRight += 1; // zvyšuj mi ukazatel "počet stejných znaků hned za sebou v dané diagonále
+    r -= 1; //snižuj mi r (koukej se pořád víc a víc nahoru)
+    c += 1; // zvyšuj mi c (koukej se pořád víc a víc doprava)
     console.log(DiagonallyUpLeftToRight);
   }
-  // Koukni doleva dolů
+  // KOUKNI DOLEVA DOLŮ
   while (
-    r > 0 &&
-    c < boardSize - 1 &&
+    c > 0 && // dokud je c větší než nula (tzn. dokud mám kam doleva couvat)
+    r < boardSize - 1 && // dokud je r menší než dolní kraj hracího pole (tzn. dokud se mám pořád ještě kam koukat směrem dolů)
     symbol === getSymbol(getField(r + 1, c - 1))
   ) {
-    DiagonallyUpLeftToRight++;
+    DiagonallyUpLeftToRight += 1;
     r += 1;
     c -= 1;
     console.log(DiagonallyUpLeftToRight);
@@ -161,25 +161,21 @@ const isWinningMove = (field) => {
   }
 
   let DiagonallyUpRightToLeft = 1;
-  // Koukni doleva nahoru
-  while (
-    r > 0 &&
-    c < boardSize - 1 &&
-    symbol === getSymbol(getField(r - 1, c - 1))
-  ) {
-    DiagonallyUpRightToLeft++;
+  // KOUKNI DOLEVA NAHORU
+  while (r > 0 && c > 0 && symbol === getSymbol(getField(r - 1, c - 1))) {
+    DiagonallyUpRightToLeft += 1;
     r -= 1;
     c -= 1;
     console.log(DiagonallyUpRightToLeft);
   }
 
-  // Koukni doprava dolů
+  // KOUKNI DOPRAVA DOLŮ
   while (
-    r > 0 &&
+    r < boardSize - 1 &&
     c < boardSize - 1 &&
     symbol === getSymbol(getField(r + 1, c + 1))
   ) {
-    DiagonallyUpRightToLeft++;
+    DiagonallyUpRightToLeft += 1;
     r += 1;
     c += 1;
     console.log(DiagonallyUpRightToLeft);
