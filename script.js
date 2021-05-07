@@ -145,6 +145,8 @@ const isWinningMove = (field) => {
     console.log(DiagonallyUpLeftToRight);
   }
   // KOUKNI DOLEVA DOLŮ
+  r = origin.row;
+  c = origin.column;
   while (
     c > 0 && // dokud je c větší než nula (tzn. dokud mám kam doleva couvat)
     r < boardSize - 1 && // dokud je r menší než dolní kraj hracího pole (tzn. dokud se mám pořád ještě kam koukat směrem dolů)
@@ -162,6 +164,8 @@ const isWinningMove = (field) => {
 
   let DiagonallyUpRightToLeft = 1;
   // KOUKNI DOLEVA NAHORU
+  r = origin.row;
+  c = origin.column;
   while (r > 0 && c > 0 && symbol === getSymbol(getField(r - 1, c - 1))) {
     DiagonallyUpRightToLeft += 1;
     r -= 1;
@@ -170,6 +174,8 @@ const isWinningMove = (field) => {
   }
 
   // KOUKNI DOPRAVA DOLŮ
+  r = origin.row;
+  c = origin.column;
   while (
     r < boardSize - 1 &&
     c < boardSize - 1 &&
